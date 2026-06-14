@@ -199,6 +199,100 @@
   .ic-email-input::placeholder { color: rgba(255,255,255,0.35); }
   .ic-email-input:focus { border-color: rgba(255,255,255,0.4); }
   .ic-form-note { font-size: 12px; color: rgba(255,255,255,0.38); margin-top: 10px; }
+
+  /* ─── MOBILE RESPONSIVE ─── */
+  @media (max-width: 768px) {
+
+    /* NAV */
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .nav-cta { padding: 9px 16px; font-size: 11px; }
+
+    /* HERO */
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 60px 28px 40px; justify-content: center; padding-top: 60px; }
+    .hero-right { padding: 40px 28px 60px; padding-top: 40px; }
+    .hero-headline { font-size: clamp(64px, 16vw, 90px); }
+    .hero-headline .italic-line { font-size: clamp(72px, 18vw, 100px); }
+    .hero-sub { font-size: 15px; margin: 20px 0 28px; }
+    .hero-cta-row { flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .btn-primary, .btn-outline { width: 100%; text-align: center; padding: 15px 20px; }
+    .hero-right h2 { font-size: clamp(40px, 10vw, 60px); }
+    .hero-right h2 em { font-size: clamp(46px, 12vw, 68px); }
+    .hero-right p { font-size: 14px; margin-top: 18px; }
+    .hero-photo { max-width: 160px; margin-top: 24px; }
+
+    /* STATS */
+    .stats-inner { flex-direction: column; }
+    .stats-left-block { min-width: unset; padding: 24px 28px; }
+    .stats-grid { flex-wrap: wrap; }
+    .stat-item { flex: 1 1 30%; padding: 16px 20px; border-left: none; border-top: 1px solid rgba(255,255,255,0.15); }
+    .stat-num { font-size: 28px; }
+
+    /* SHOWS */
+    .shows { padding: 60px 0 0; }
+    .section-header { padding: 0 28px 40px; }
+    .shows-grid { grid-template-columns: 1fr; }
+    .show-pushback, .show-meirak { padding: 40px 28px; }
+    .show-name { font-size: clamp(48px, 12vw, 72px); }
+    .show-name em { font-size: clamp(54px, 14vw, 80px); }
+    .show-desc, .show-desc-mk { font-size: 14px; margin: 16px 0 24px; }
+    .show-sub-btn, .show-sub-btn-mk { width: 100%; justify-content: center; padding: 14px 20px; }
+    .show-footer-stats { gap: 20px; }
+    .sfs .n, .sfs-mk .n { font-size: 22px; }
+
+    /* COMMENTS */
+    .comments { padding: 60px 0; }
+    .comments .section-header { padding: 0 28px 36px; }
+    .comment-card { min-width: 260px; max-width: 280px; padding: 20px; }
+
+    /* INNER CIRCLE */
+    .inner-circle { grid-template-columns: 1fr; min-height: auto; }
+    .ic-left { padding: 48px 28px 32px; }
+    .ic-right { padding: 0px 28px 48px; gap: 18px; }
+    .ic-title { font-size: clamp(48px, 12vw, 72px); }
+    .ic-desc { font-size: 14px; margin: 16px 0 24px; }
+    .ic-form { flex-direction: column; gap: 10px; max-width: 100%; }
+    .ic-email-input { width: 100%; padding: 14px 16px; }
+    .ic-btn-a { width: 100%; text-align: center; padding: 14px 20px; }
+
+    /* DIVIDER */
+    .divider-ticker { display: none; }
+
+    /* SOCIALS */
+    .socials { padding: 56px 28px; }
+    .socials h3 { font-size: 40px; }
+    .social-grid { gap: 8px; }
+    .social-btn { padding: 11px 18px; font-size: 11px; }
+
+    /* MERCH */
+    .merch { padding: 60px 28px; }
+    .merch-coming-box { padding: 40px 28px; }
+    .merch-coming-title { font-size: 36px; }
+
+    /* FOOTER */
+    footer { padding: 48px 28px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+
+    /* SECTION TITLES */
+    .section-title { font-size: clamp(36px, 9vw, 56px); }
+  }
+
+  /* TABLET */
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .hero-headline { font-size: clamp(56px, 8vw, 90px); }
+    .hero-headline .italic-line { font-size: clamp(64px, 9vw, 100px); }
+    .show-pushback, .show-meirak { padding: 48px; }
+    .show-name { font-size: clamp(44px, 5vw, 70px); }
+    .show-name em { font-size: clamp(50px, 6vw, 78px); }
+    footer { padding: 48px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .stats-grid { flex-wrap: wrap; }
+    .stat-item { flex: 1 1 30%; }
+    nav { padding: 16px 32px; }
+    .nav-links { gap: 20px; }
+  }
 </style>
 </head>
 <body>
