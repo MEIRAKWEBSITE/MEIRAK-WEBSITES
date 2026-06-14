@@ -41,7 +41,7 @@
 
   /* ─── HERO ─── */
   .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 88vh; }
-  .hero-left { background: var(--cream); padding: 88px 64px; display: flex; flex-direction: column; justify-content: center; }
+  .hero-left { background: var(--cream); padding: 88px 64px; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 120px; }
   .hero-eyebrow { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--red); font-weight: 500; margin-bottom: 22px; }
   .hero-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(72px, 9vw, 124px); line-height: 0.88; color: var(--navy); }
   .hero-headline .italic-line { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 700; color: var(--red); font-size: clamp(84px, 10.5vw, 142px); line-height: 0.85; display: block; }
@@ -55,7 +55,7 @@
   .follow-label { font-size: 11px; color: #8a9ab0; letter-spacing: 1px; text-transform: uppercase; margin-right: 4px; }
   .social-pill { border: 1.5px solid rgba(13,27,46,0.2); padding: 6px 14px; font-size: 11px; font-weight: 500; letter-spacing: 1px; color: var(--navy); cursor: pointer; text-decoration: none; display: inline-block; }
   .social-pill:hover { background: var(--navy); color: #fff; }
-  .hero-right { background: var(--navy); padding: 88px 64px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+  .hero-right { background: var(--navy); padding: 88px 64px; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 120px; position: relative; overflow: hidden; }
   .hero-right::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border: 1px solid rgba(255,255,255,0.04); border-radius: 50%; }
   .about-eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--red); font-weight: 500; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
   .about-eyebrow::before { content: '◆'; font-size: 8px; }
@@ -421,19 +421,18 @@
   <div class="ic-left">
     <span class="ic-pill">Coming Soon</span>
     <h2 class="ic-title">The Inner <em>Circle.</em></h2>
-    <p class="ic-desc">Go deeper. Get closer. Meira's exclusive membership for people who don't just watch — they're part of the mission.</p>
+    <p class="ic-desc">Some people watch The Pushback. A small group of people are The Pushback. The Inner Circle is invitation-only access to Meira, the mission, and the people who are actually in it.</p>
     <form class="ic-form" onsubmit="handleSubscribe(event)">
       <input type="email" class="ic-email-input" placeholder="Your email address" required>
       <button type="submit" class="ic-btn-a">Join Waitlist →</button>
     </form>
-    <p class="ic-form-note" id="ic-form-note">Founding members get in first. No spam, ever.</p>
+    <p class="ic-form-note" id="ic-form-note">Be first when we launch. No spam, ever.</p>
   </div>
   <div class="ic-right">
-    <div class="ic-perk"><span class="ic-num">01</span><div class="ic-perk-text"><h4>[Perk title]</h4><p>[Description — to be filled in]</p></div></div>
-    <div class="ic-perk"><span class="ic-num">02</span><div class="ic-perk-text"><h4>[Perk title]</h4><p>[Description — to be filled in]</p></div></div>
-    <div class="ic-perk"><span class="ic-num">03</span><div class="ic-perk-text"><h4>[Perk title]</h4><p>[Description — to be filled in]</p></div></div>
-    <div class="ic-perk"><span class="ic-num">04</span><div class="ic-perk-text"><h4>[Perk title]</h4><p>[Description — to be filled in]</p></div></div>
-    <div class="ic-perk"><span class="ic-num">05</span><div class="ic-perk-text"><h4>[Perk title]</h4><p>[Description — to be filled in]</p></div></div>
+    <div class="ic-perk"><span class="ic-num">01</span><div class="ic-perk-text"><h4>Monthly live call with Meira</h4><p>Unfiltered, unscripted. Bring your questions, your frustrations, your takes. This is where the real conversation happens.</p></div></div>
+    <div class="ic-perk"><span class="ic-num">02</span><div class="ic-perk-text"><h4>A private community</h4><p>A space for Inner Circle members only. Share what you're seeing, what's making you angry, what nobody else is talking about.</p></div></div>
+    <div class="ic-perk"><span class="ic-num">03</span><div class="ic-perk-text"><h4>One free merch item</h4><p>Wear the mission. Your choice, shipped to you.</p></div></div>
+    <div class="ic-perk"><span class="ic-num">04</span><div class="ic-perk-text"><h4>Exclusive content</h4><p>Behind the scenes, extended takes, and things that never make it to the public shows.</p></div></div>
   </div>
 </section>
 
