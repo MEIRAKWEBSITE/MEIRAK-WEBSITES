@@ -442,15 +442,24 @@ function handleSubscribe(e) {
   const email = e.target.querySelector('input[type="email"]').value;
   const note = document.getElementById('ic-form-note');
   const btn = e.target.querySelector('button');
+  const input = e.target.querySelector('input[type="email"]');
 
-  // Redirect to Beehiiv subscribe with email prefilled
-  window.open('https://the-inner-circle-w-meira-k.beehiiv.com/subscribe?email=' + encodeURIComponent(email), '_blank');
+  // Send to Beehiiv silently in background - no redirect
+  fetch('https://the-inner-circle-w-meira-k.beehiiv.com/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email }),
+    mode: 'no-cors'
+  });
 
-  // Show success message on site
-  e.target.querySelector('input[type="email"]').value = '';
-  btn.textContent = "You're in! ✓";
+  // Show success - person never leaves the page
+  input.value = '';
+  input.style.display = 'none';
+  btn.textContent = "You're in ✓";
   btn.style.background = '#1a6b73';
-  note.textContent = "Welcome to the waitlist. We'll be in touch when the Inner Circle launches.";
+  btn.style.cursor = 'default';
+  btn.disabled = true;
+  note.textContent = "You're on the list. We'll be in touch when The Inner Circle launches.";
   note.style.color = 'rgba(255,255,255,0.85)';
 }
 </script>
